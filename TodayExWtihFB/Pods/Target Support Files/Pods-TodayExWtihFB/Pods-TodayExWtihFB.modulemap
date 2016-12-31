@@ -1,0 +1,6 @@
+framework module Pods_TodayExWtihFB {
+  umbrella header "Pods-TodayExWtihFB-umbrella.h"
+
+  export *
+  module * { export * }
+}
