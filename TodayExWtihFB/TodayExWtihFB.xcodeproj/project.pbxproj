@@ -23,6 +23,8 @@
 		D88A99251E17B3BC00CA442F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88A99231E17B3BC00CA442F /* MainInterface.storyboard */; };
 		D88A99291E17B3BC00CA442F /* CurrentWork.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D88A991C1E17B3BC00CA442F /* CurrentWork.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D88A992F1E17C0FB00CA442F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88A992E1E17C0FB00CA442F /* GoogleService-Info.plist */; };
+		D88A99311E18B1DD00CA442F /* FireDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A99301E18B1DD00CA442F /* FireDataUtility.swift */; };
+		D88A99321E18B1DD00CA442F /* FireDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A99301E18B1DD00CA442F /* FireDataUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,9 @@
 		D88A99241E17B3BC00CA442F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D88A99261E17B3BC00CA442F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88A992E1E17C0FB00CA442F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D88A99301E18B1DD00CA442F /* FireDataUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireDataUtility.swift; sourceTree = "<group>"; };
+		D88A99331E18B26800CA442F /* TodayExWtihFB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayExWtihFB.entitlements; sourceTree = "<group>"; };
+		D88A99341E18B2B300CA442F /* CurrentWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CurrentWork.entitlements; sourceTree = "<group>"; };
 		F15DB8EECB5D974ED54BE71A /* Pods-TodayExWtihFBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayExWtihFBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayExWtihFBUITests/Pods-TodayExWtihFBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +181,7 @@
 		D88A98E91E17B20500CA442F /* TodayExWtihFB */ = {
 			isa = PBXGroup;
 			children = (
+				D88A99331E18B26800CA442F /* TodayExWtihFB.entitlements */,
 				D88A992E1E17C0FB00CA442F /* GoogleService-Info.plist */,
 				D88A98EA1E17B20500CA442F /* AppDelegate.swift */,
 				D88A98EC1E17B20500CA442F /* ViewController.swift */,
@@ -183,6 +189,7 @@
 				D88A98F11E17B20500CA442F /* Assets.xcassets */,
 				D88A98F31E17B20500CA442F /* LaunchScreen.storyboard */,
 				D88A98F61E17B20500CA442F /* Info.plist */,
+				D88A99301E18B1DD00CA442F /* FireDataUtility.swift */,
 			);
 			path = TodayExWtihFB;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 		D88A99201E17B3BC00CA442F /* CurrentWork */ = {
 			isa = PBXGroup;
 			children = (
+				D88A99341E18B2B300CA442F /* CurrentWork.entitlements */,
 				D88A99211E17B3BC00CA442F /* TodayViewController.swift */,
 				D88A99231E17B3BC00CA442F /* MainInterface.storyboard */,
 				D88A99261E17B3BC00CA442F /* Info.plist */,
@@ -327,6 +335,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = FP2HMA6Z72;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D88A98FA1E17B20500CA442F = {
 						CreatedOnToolsVersion = 8.2;
@@ -344,6 +357,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = FP2HMA6Z72;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -579,6 +597,7 @@
 			files = (
 				D88A98ED1E17B20500CA442F /* ViewController.swift in Sources */,
 				D88A98EB1E17B20500CA442F /* AppDelegate.swift in Sources */,
+				D88A99311E18B1DD00CA442F /* FireDataUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88A99321E18B1DD00CA442F /* FireDataUtility.swift in Sources */,
 				D88A99221E17B3BC00CA442F /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +771,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TodayExWtihFB/TodayExWtihFB.entitlements;
 				DEVELOPMENT_TEAM = FP2HMA6Z72;
 				INFOPLIST_FILE = TodayExWtihFB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -766,6 +787,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TodayExWtihFB/TodayExWtihFB.entitlements;
 				DEVELOPMENT_TEAM = FP2HMA6Z72;
 				INFOPLIST_FILE = TodayExWtihFB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -841,6 +863,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01CDA7B6F759E281A8BE2C4E /* Pods-CurrentWork.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CurrentWork/CurrentWork.entitlements;
 				DEVELOPMENT_TEAM = FP2HMA6Z72;
 				INFOPLIST_FILE = CurrentWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -855,6 +878,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F78ADB3775B7A7D40C7837D /* Pods-CurrentWork.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CurrentWork/CurrentWork.entitlements;
 				DEVELOPMENT_TEAM = FP2HMA6Z72;
 				INFOPLIST_FILE = CurrentWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -884,6 +908,7 @@
 				D88A99111E17B20500CA442F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D88A99121E17B20500CA442F /* Build configuration list for PBXNativeTarget "TodayExWtihFBTests" */ = {
 			isa = XCConfigurationList;
@@ -892,6 +917,7 @@
 				D88A99141E17B20500CA442F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D88A99151E17B20500CA442F /* Build configuration list for PBXNativeTarget "TodayExWtihFBUITests" */ = {
 			isa = XCConfigurationList;
@@ -900,6 +926,7 @@
 				D88A99171E17B20500CA442F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D88A992A1E17B3BC00CA442F /* Build configuration list for PBXNativeTarget "CurrentWork" */ = {
 			isa = XCConfigurationList;
@@ -908,6 +935,7 @@
 				D88A992C1E17B3BC00CA442F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
