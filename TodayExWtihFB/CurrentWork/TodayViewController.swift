@@ -8,19 +8,41 @@
 
 import UIKit
 import NotificationCenter
-import Firebase
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    
+    @IBOutlet weak var lblContent: UILabel!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print("###### extension init")
+        NotificationCenter.default.addObserver(self, selector: #selector(valueChanged(notification:)), name: UserDefaults.didChangeNotification, object: nil)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        FIRApp.configure()
+        
+        print("######### enter extension")
+        self.updateValue()
         // Do any additional setup after loading the view from its nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func valueChanged(notification: Notification) {
+        self.updateValue()
+    }
+    
+    func updateValue() {
+        let defaults = UserDefaults.init(suiteName: "group.fireBaseTodayExtension")
+        let str: String = defaults?.value(forKey: "key") as! String
+        print(str)
+        self.lblContent.text = str
     }
     
     @IBAction func actionClick(_ sender: Any) {
